@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  signup-portal:
+    build:
+      dockerfile: deployment/website.dockerfile
+      context: ..
+
+    image: signup-portal-website
+
+    environment:
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+
+    volumes:
+      - /var/run/postgresql:/var/run/postgresql:rw
+
+    ports:
+      - 8820:80
+
+    restart: always
+
+  static-server:
+    build:
+      dockerfile: deployment/static.dockerfile
+      context: ..
+
+    image: signup-portal-static
+
+    ports:
+      - 8821:80
+
+    restart: always

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Prebiehajúce prihlasovanie{% endblock %}
+
+{% block content %}
+<h1>Prebiehajúce prihlasovanie</h1>
+
+{% include 'messages.html' %}
+
+<div class="list-group">
+    {% for redirect in redirects %}
+    <a class="list-group-item" href="{{ redirect.target }}">{{ redirect }}</a>
+    {% empty %}
+    <a class="list-group-item disabled" href="#">Neprebieha žiadne prihlasovanie</a>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  development-database:
+    image: postgres:12
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - pgdata:/var/lib/postgresql/data:rw
+      - /var/run/postgresql:/var/run/postgresql:rw
+
+volumes:
+  pgdata:

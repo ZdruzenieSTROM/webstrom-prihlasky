@@ -1,0 +1,7 @@
+.vscode
+.pylintrc
+
+__pycache__
+
+Dockerfile
+compose.yaml
