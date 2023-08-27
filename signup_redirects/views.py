@@ -1,6 +1,6 @@
+from django.contrib import messages
 from django.urls import reverse
 from django.views.generic import ListView, RedirectView
-from django.contrib import messages
 
 from .models import SignupRedirect
 

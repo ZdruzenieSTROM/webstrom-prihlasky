@@ -11,6 +11,9 @@ class SignupRedirectsManager(models.Manager):
 
 class SignupRedirect(models.Model):
     class Meta:
+        verbose_name = "presmerovanie"
+        verbose_name_plural = "presmerovania"
+
         constraints = [
             pgconstraints.ExclusionConstraint(
                 name="no-same-origin-overlaps",
@@ -21,10 +24,10 @@ class SignupRedirect(models.Model):
             ),
         ]
 
-    name = models.CharField(max_length=512)
-    origin = models.SlugField()
-    target = models.URLField()
-    duration = pgfields.DateRangeField()
+    name = models.CharField("Názov", max_length=512)
+    origin = models.SlugField("Skrátená adresa")
+    target = models.URLField("Cieľová adresa")
+    duration = pgfields.DateRangeField("Trvanie")
 
     objects = SignupRedirectsManager()
 
