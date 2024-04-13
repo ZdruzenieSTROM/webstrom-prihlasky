@@ -16,4 +16,10 @@ USE_X_FORWARDED_HOST = True
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
-STATIC_ROOT = "/static"
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "signups",
+        "USER": "signups",
+    }
+}

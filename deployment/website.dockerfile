@@ -8,7 +8,7 @@ COPY . ./
 
 RUN pipenv sync --system
 
-ENV DJANGO_SETTINGS_MODULE=signup_portal.production
+ENV DJANGO_SETTINGS_MODULE=signup_portal.production_settings
 ENV PGSERVICEFILE /app/.pg_service.conf
 
 EXPOSE 80

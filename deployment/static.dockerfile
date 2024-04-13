@@ -10,8 +10,7 @@ RUN pipenv sync --system
 
 COPY . ./
 
-ENV DJANGO_SETTINGS_MODULE=signup_portal.production
-ENV DJANGO_SECRET_KEY=very-secret-key
+ENV DJANGO_SETTINGS_MODULE=signup_portal.static_files_settings
 
 RUN python manage.py collectstatic --no-input
 
