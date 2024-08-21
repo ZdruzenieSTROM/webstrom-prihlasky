@@ -23,3 +23,8 @@ DATABASES = {
         "USER": "signups",
     }
 }
+
+ADMINS = [
+    ("Martin Mihálik", "mihalik@strom.sk"),
+    ("Peter Kovács", "kovacs@strom.sk"),
+]
