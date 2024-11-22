@@ -1,4 +1,4 @@
-FROM python:3.11
+FROM python:3.12
 
 WORKDIR /app
 
@@ -9,7 +9,6 @@ COPY . ./
 RUN pipenv sync --system
 
 ENV DJANGO_SETTINGS_MODULE=signup_portal.production_settings
-ENV PGSERVICEFILE /app/.pg_service.conf
 
 EXPOSE 80
 
