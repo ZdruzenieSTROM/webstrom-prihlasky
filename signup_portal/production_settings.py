@@ -24,6 +24,15 @@ DATABASES = {
     }
 }
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+EMAIL_HOST = "smtp-relay.gmail.com"
+EMAIL_PORT = "587"
+EMAIL_USE_TLS = True
+
+DEFAULT_FROM_EMAIL = "noreply@strom.sk"
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
 ADMINS = [
     ("Martin Mihálik", "mihalik@strom.sk"),
     ("Peter Kovács", "kovacs@strom.sk"),
