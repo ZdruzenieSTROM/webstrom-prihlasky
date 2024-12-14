@@ -37,3 +37,5 @@ ADMINS = [
     ("Martin Mihálik", "mihalik@strom.sk"),
     ("Peter Kovács", "kovacs@strom.sk"),
 ]
+
+STATIC_ROOT = BASE_DIR / "static"

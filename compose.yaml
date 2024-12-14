@@ -1,8 +1,6 @@
-version: "3"
-
 services:
   development-database:
-    image: postgres:12
+    image: postgres:17
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:

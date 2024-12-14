@@ -12,6 +12,3 @@ pylint = "*"
 pylint-django = "*"
 black = "*"
 isort = "*"
-
-[requires]
-python_version = "3.12"
