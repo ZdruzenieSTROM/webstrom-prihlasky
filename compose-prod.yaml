@@ -3,8 +3,8 @@ version: "3"
 services:
   signup-portal:
     build:
-      dockerfile: deployment/website.dockerfile
-      context: ..
+      dockerfile: docker/website.dockerfile
+      context: .
 
     image: signup-portal-website
 
@@ -21,8 +21,8 @@ services:
 
   static-server:
     build:
-      dockerfile: deployment/static.dockerfile
-      context: ..
+      dockerfile: docker/static.dockerfile
+      context: .
 
     image: signup-portal-static
 

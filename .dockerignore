@@ -1,9 +1,12 @@
-.vscode
+.git/
+.github/
+.vscode/
+
+.gitignore
 .pylintrc
+.isort.cfg
 
-__pycache__
-
-Dockerfile
-compose.yaml
+**/__pycache__/*
 
 deployment/
+compose.yaml

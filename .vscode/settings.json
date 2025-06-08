@@ -8,5 +8,8 @@
         "editor.rulers": [
             88
         ]
+    },
+    "files.associations": {
+        "compose-prod.yaml": "dockercompose"
     }
 }
